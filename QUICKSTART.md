@@ -1,6 +1,6 @@
-# 1 頁唔使識 code 都跟到嘅 quickstart
-
 <!-- CANTO-DRAFT: needs native pass -->
+
+# 1 頁唔使識 code 都跟到嘅 quickstart
 
 用 AI 幫你記住嘢、整理成個人生，唔使識寫 code。
 
@@ -29,15 +29,18 @@
 Repo 即係「一個 folder 嘅網上版」。去呢個 GitHub 頁面，撳個綠色 **Code** 掣 → **Download ZIP** → 解壓（雙擊個 zip 檔就得）。跟住用 Obsidian 打開嗰個 folder 做 vault（vault 即係 Obsidian 叫你嘅筆記本做嘅名）。
 成功嘅樣：Obsidian 左手面見到成堆 folder，例如 `Daily`、`Context`、`Knowledge`。
 
-**④ 開 terminal，打兩句嘢**
+**④ 喺個 folder 度開 terminal，打兩句嘢**
 
-Terminal（終端機）即係部機入面一個打字用嘅窗口。Mac 喺 Launchpad 搵 "Terminal"，Windows 搵 "命令提示字元" 或者 "PowerShell"。去返頭先解壓嗰個 folder，開個 terminal，打：
+Terminal（終端機）即係部機入面一個打字用嘅窗口。一定要喺頭先解壓嗰個 folder 度開佢：
+Mac：喺 Finder 右 click 個 folder →「New Terminal at Folder」（搵唔到呢個選項嘅話，將個 folder 拖去 Dock 上面個 Terminal icon 度）。
+Windows：喺 File Explorer 開個 folder，喺上面地址欄打 `cmd` 撳 Enter。
+成功嘅樣：個窗口最尾嗰行見到你 folder 個名。跟住打：
 
 ```
 claude
 ```
 
-見到個黑色視窗打字得 = 成功。跟住打：
+見到個黑色視窗打字得 = 成功。第一次會叫你登入 Claude 帳號，跟住做就得。跟住打：
 
 ```
 /onboard
@@ -49,6 +52,7 @@ Claude 會逐條問你幾條問題（你叫咩名、做咩、想呢個系統幫�
 **⑤ 之後每日**
 
 開返個 session（即係打 `claude` 再開始傾偈），將發生咗咩、諗到咩、變咗咩，同佢講就得。AI 自己識歸檔，唔使你自己執 file。
+成功嘅樣：你會見到 `Daily/` folder 入面自動多咗今日嘅 note。
 
 ## 常見問題
 
