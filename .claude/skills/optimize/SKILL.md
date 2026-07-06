@@ -13,7 +13,7 @@ Run each of these across those folders (grep and Glob over reading every file wh
 
 - **Dead wikilinks**: `[[Note Name]]` references where no file with that name exists anywhere in the vault. Exempt a link if its target folder doesn't exist yet and the note carries `status: example` or `status: template` frontmatter.
 - **Orphan notes**: any note outside `Context/`, `memory/`, `Daily/`, and router files (`CLAUDE.md`, `README.md`) that no other note wikilinks to. `Daily/` is exempt: daily notes link outward by design, nothing links back to them.
-- **Misrouted files**: content sitting in the wrong folder per root `CLAUDE.md`'s routing table, or a file sitting at vault root that isn't one of the exempt root files (`CLAUDE.md`, `README.md`, `LICENSE`).
+- **Misrouted files**: content sitting in the wrong folder per root `CLAUDE.md`'s routing table, or a file sitting at vault root that isn't one of the exempt root files (`CLAUDE.md`, `README.md`, `QUICKSTART.md`, `LICENSE`).
 - **Contradicting routers**: two `CLAUDE.md`/`README.md` files giving conflicting instructions for the same kind of content.
 - **Missing frontmatter**: notes outside the exempt set (router files, `memory/`) missing `type`, `status`, or `tags`.
 - **Stale actives**: notes with `status: active` whose file modification time is 30+ days old.
