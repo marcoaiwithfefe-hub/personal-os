@@ -19,7 +19,7 @@ This is a template, not a finished product. You fork it, then spend a week actua
 4. Run `claude` inside the folder and type `/onboard`.
 5. Live in it daily. Tell Claude what happened, what you learned, what changed. It files everything.
 
-If you'd rather skip the command line entirely, see `QUICKSTART.md` (coming soon) for a no-code walkthrough.
+If you'd rather skip the command line entirely, see [`QUICKSTART.md`](QUICKSTART.md) for a no-code walkthrough.
 
 Technical readers who want to understand the mechanics before committing: start with `docs/01-04` for how the routing kernel and memory protocol actually work, then read `examples/trading/` for a complete worked domain.
 
@@ -38,5 +38,7 @@ Technical readers who want to understand the mechanics before committing: start 
 3. Clone 呢個 repo，或者喺 GitHub 度撳 "Use this template"，然後喺 Obsidian 度打開個 folder 做 vault。
 4. 喺個 folder 入面行 `claude`，打 `/onboard`。
 5. 每日用。發生咗咩、學到咩、變咗咩，同 Claude 講，佢會幫你歸檔。
+
+如果你想完全唔使打指令，睇吓 [`QUICKSTART.md`](QUICKSTART.md)，有一個唔使識 code 嘅版本。
 
 <!-- /CANTO-DRAFT -->
