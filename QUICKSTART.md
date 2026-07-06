@@ -26,7 +26,7 @@
 
 **③ Download 呢個 repo**
 
-Repo 即係「一個 folder 嘅網上版」。去呢個 GitHub 頁面，撳個綠色 **Code** 掣 → **Download ZIP** → 解壓（雙擊個 zip 檔就得）。跟住用 Obsidian 打開嗰個 folder 做 vault（vault 即係 Obsidian 叫你嘅筆記本做嘅名）。
+Repo 即係「一個 folder 嘅網上版」。去呢個 GitHub 頁面，撳個綠色 **Code** 掣 → **Download ZIP** → 解壓：Mac 雙擊個 zip 就得，Windows 要右 click 個 zip 檔 →「Extract All / 全部解壓縮」先至係真係解壓。跟住用 Obsidian 打開嗰個 folder 做 vault（vault 即係 Obsidian 叫你嘅筆記本做嘅名）。
 成功嘅樣：Obsidian 左手面見到成堆 folder，例如 `Daily`、`Context`、`Knowledge`。
 
 **④ 喺個 folder 度開 terminal，打兩句嘢**

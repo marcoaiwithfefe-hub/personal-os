@@ -7,10 +7,12 @@ Audit the vault for hygiene problems. Read-only until the user approves a fix, d
 
 ## 1. Checks
 
-Run each of these across the vault (grep and Glob over reading every file whole):
+Audit only the user-content folders: `Context/`, `Daily/`, `Knowledge/`, `Projects/`, `memory/` — `docs/`, `examples/`, and root files are shipped scaffolding, not user content.
 
-- **Dead wikilinks**: `[[Note Name]]` references where no file with that name exists anywhere in the vault.
-- **Orphan notes**: any note outside `Context/`, `memory/`, and router files (`CLAUDE.md`, `README.md`) that no other note wikilinks to.
+Run each of these across those folders (grep and Glob over reading every file whole):
+
+- **Dead wikilinks**: `[[Note Name]]` references where no file with that name exists anywhere in the vault. Exempt a link if its target folder doesn't exist yet and the note carries `status: example` or `status: template` frontmatter.
+- **Orphan notes**: any note outside `Context/`, `memory/`, `Daily/`, and router files (`CLAUDE.md`, `README.md`) that no other note wikilinks to. `Daily/` is exempt: daily notes link outward by design, nothing links back to them.
 - **Misrouted files**: content sitting in the wrong folder per root `CLAUDE.md`'s routing table, or a file sitting at vault root that isn't one of the exempt root files (`CLAUDE.md`, `README.md`, `LICENSE`).
 - **Contradicting routers**: two `CLAUDE.md`/`README.md` files giving conflicting instructions for the same kind of content.
 - **Missing frontmatter**: notes outside the exempt set (router files, `memory/`) missing `type`, `status`, or `tags`.
