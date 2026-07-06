@@ -16,16 +16,19 @@ Setup:
 
 ```bash
 pip install fredapi
-cp examples/trading/data/.env.example examples/trading/data/.env
+cd examples/trading/data
+cp .env.example .env
 # edit .env, add a free key from https://fred.stlouisfed.org/docs/api/api_key.html
 ```
 
-Run:
+Run from inside `examples/trading/data/` — the script looks for `.env` in the directory you run it from:
 
 ```bash
-python3 examples/trading/data/fred.py DGS10       # 10-Year Treasury yield (default)
-python3 examples/trading/data/fred.py CPIAUCSL    # CPI, all items (a monthly series)
+python3 fred.py DGS10       # 10-Year Treasury yield (default)
+python3 fred.py CPIAUCSL    # CPI, all items (a monthly series)
 ```
+
+If you'd rather skip the `.env` file, `export FRED_API_KEY=your_key_here` works from any directory.
 
 Output shape (illustrative, not a live pull, run it yourself for current numbers):
 
@@ -44,12 +47,12 @@ It fetches the last 400 days so a monthly series like `CPIAUCSL` always has enou
 
 Downloads the CFTC's free weekly Commitments of Traders report and summarizes net positioning for one contract. No API key, no account, standard library only.
 
-Run:
+Run (no `.env` needed, so any directory works — shown from `examples/trading/data/` like above):
 
 ```bash
-python3 examples/trading/data/cftc.py                    # defaults to GOLD
-python3 examples/trading/data/cftc.py "E-MINI S&P 500"
-python3 examples/trading/data/cftc.py "10-YEAR T-NOTE"
+python3 cftc.py                    # defaults to GOLD
+python3 cftc.py "E-MINI S&P 500"
+python3 cftc.py "10-YEAR T-NOTE"
 ```
 
 Real output from a live run (CFTC publishes a new report every week, so your numbers will differ):
@@ -77,6 +80,7 @@ A routed note looks like an ordinary vault note, nothing script-specific about i
 ```markdown
 ---
 type: reference
+date: 2025-01-17
 status: active
 tags: [markets, rates]
 ---

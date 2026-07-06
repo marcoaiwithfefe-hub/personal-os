@@ -1,6 +1,6 @@
 # The Memory Protocol
 
-`memory/` holds a different kind of fact than the rest of the vault: durable, cross-cutting things about you that aren't tied to a single day (`Daily/`) or a single project (`Projects/`), i.e. a standing preference, a correction you gave once and don't want to repeat. `memory/README.md` is the router for this folder, exempted from the general note frontmatter standard because its schema is purpose-built for this kind of fact.
+`memory/` holds a different kind of fact than the rest of the vault: durable, cross-cutting things about you that aren't tied to a single day (`Daily/`) or a single project (`Projects/`), e.g. a standing preference, a correction you gave once and don't want to repeat. `memory/README.md` is the router for this folder, exempted from the general note frontmatter standard because its schema is purpose-built for this kind of fact.
 
 ## One fact per file
 
@@ -24,7 +24,7 @@ A `feedback` memory's body carries two extra lines beyond the fact itself, **Why
 
 ## `MEMORY.md`: the index
 
-One line per memory, kept in `memory/MEMORY.md`. This is the file that actually gets read, in full, at the start of a session, that's on top of the `Daily/` and `Context/me.md` reads the root kernel already does for every session, so a complete session startup touches three files, not two. Individual memory files only get opened when their one-line description looks relevant to whatever the session is actually doing. That's the whole point of keeping descriptions specific: a vague description means opening the file to find out if it matters, which defeats the reason the index exists.
+One line per memory, kept in `memory/MEMORY.md`. It's the recall layer: loaded in full every session, alongside the kernel's two startup reads (the latest `Daily/` note and `Context/me.md`), so every memory's one-line description is on hand without opening the files behind it. Individual memory files only get opened when their one-line description looks relevant to whatever the session is actually doing. That's the whole point of keeping descriptions specific: a vague description means opening the file to find out if it matters, which defeats the reason the index exists.
 
 Update the index line whenever a memory is added, changed, or removed, an index that's out of sync with the files it points to is worse than no index.
 
