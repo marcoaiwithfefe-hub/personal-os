@@ -36,7 +36,7 @@ tags: [example, onboarding]
 ---
 ```
 
-Standard fields: `type`, `date`, `status`, `tags`. Always include `status:` and 2 or more specific `tags:`. Exempt from frontmatter: router files (`CLAUDE.md`, `README.md`).
+Standard fields: `type`, `date`, `status`, `tags`. Always include `status:` and 2 or more specific `tags:`. Exempt from frontmatter: router files (`CLAUDE.md`, `README.md`), and `memory/` files (which follow their own schema — see `memory/README.md`).
 
 ## Obsidian Syntax
 
