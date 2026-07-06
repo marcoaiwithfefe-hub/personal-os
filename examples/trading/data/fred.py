@@ -28,7 +28,8 @@ from pathlib import Path
 from fredapi import Fred
 
 DEFAULT_SERIES_ID = "DGS10"  # 10-Year Treasury Constant Maturity Rate
-LOOKBACK_DAYS = 30
+LOOKBACK_DAYS = 400  # wide enough that monthly series (e.g. CPIAUCSL) always have data
+MAX_PRINTED = 12  # cap output so daily series stay tidy
 
 
 class ConfigError(Exception):
@@ -82,8 +83,9 @@ def main() -> int:
         print(f"No observations found for {series_id} in the last {LOOKBACK_DAYS} days.")
         return 0
 
-    print(f"{series_id} - last {len(data)} observations:")
-    for observed_date, value in data.items():
+    recent = data.iloc[-MAX_PRINTED:]
+    print(f"{series_id} - last {len(recent)} observations:")
+    for observed_date, value in recent.items():
         print(f"  {observed_date.date()}  {value}")
     return 0
 

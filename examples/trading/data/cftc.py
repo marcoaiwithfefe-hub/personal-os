@@ -184,8 +184,8 @@ def main() -> int:
         return 1
 
     if "_error" in summary:
-        print(f"No data found for {summary['contract']}.")
-        return 0
+        print(f"No data found for {summary['contract']}.", file=sys.stderr)
+        return 1
 
     print(f"{summary['contract']} - as of {summary['as_of']}")
     print(f"  Noncommercial (large speculator) net position: {summary['mm_net']:+,}")
