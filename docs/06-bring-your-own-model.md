@@ -52,7 +52,9 @@ Gemini CLI reads `GEMINI.md`, which SETUP.md's Phase 3 writes as a one-line poin
 
 Install Grok Builder per [xAI's docs](https://x.ai) for your platform. Once installed, open it in the vault folder and paste `SETUP.md`.
 
-`Tested with: (pending dry run, Task 10)`
+Grok Builder reads `AGENTS.md`, which SETUP.md's Phase 3 writes as a full copy of `CLAUDE.md` — verified live: a restarted session with no setup context loaded it, routed a new fact to the right daily note, and reported the path.
+
+`Tested with: Grok Builder on 2026-07-12.`
 
 ## opencode + any endpoint
 
