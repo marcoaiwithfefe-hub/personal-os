@@ -21,6 +21,7 @@ Browse series IDs at https://fred.stlouisfed.org/
 from __future__ import annotations
 
 import os
+import socket
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -30,6 +31,7 @@ from fredapi import Fred
 DEFAULT_SERIES_ID = "DGS10"  # 10-Year Treasury Constant Maturity Rate
 LOOKBACK_DAYS = 400  # wide enough that monthly series (e.g. CPIAUCSL) always have data
 MAX_PRINTED = 12  # cap output so daily series stay tidy
+REQUEST_TIMEOUT = 30  # fredapi doesn't expose a timeout, so set it socket-wide
 
 
 class ConfigError(Exception):
@@ -61,6 +63,7 @@ def get_recent_observations(series_id: str, lookback_days: int = LOOKBACK_DAYS):
             "https://fred.stlouisfed.org/docs/api/api_key.html"
         )
 
+    socket.setdefaulttimeout(REQUEST_TIMEOUT)
     fred = Fred(api_key=api_key)
     start = (date.today() - timedelta(days=lookback_days)).isoformat()
     data = fred.get_series(series_id, observation_start=start)
@@ -76,7 +79,10 @@ def main() -> int:
         print(f"Config error: {exc}", file=sys.stderr)
         return 1
     except Exception as exc:
-        print(f"Failed to fetch {series_id}: {exc}", file=sys.stderr)
+        # Redact the API key in case the upstream error echoes the request URL
+        key = os.environ.get("FRED_API_KEY")
+        detail = str(exc).replace(key, "***") if key else str(exc)
+        print(f"Failed to fetch {series_id}: {detail}", file=sys.stderr)
         return 1
 
     if len(data) == 0:
