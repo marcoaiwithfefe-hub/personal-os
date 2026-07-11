@@ -24,7 +24,7 @@ A `feedback` memory's body carries two extra lines beyond the fact itself, **Why
 
 ## `MEMORY.md`: the index
 
-One line per memory, kept in `memory/MEMORY.md`. It's the recall layer: loaded in full every session, alongside the kernel's two startup reads (the latest `Daily/` note and `Context/me.md`), so every memory's one-line description is on hand without opening the files behind it. Individual memory files only get opened when their one-line description looks relevant to whatever the session is actually doing. That's the whole point of keeping descriptions specific: a vague description means opening the file to find out if it matters, which defeats the reason the index exists.
+One line per memory, kept in `memory/MEMORY.md`. It's the recall layer: loaded in full every session as one of the kernel's three startup reads (alongside the latest `Daily/` note and `Context/me.md`), so every memory's one-line description is on hand without opening the files behind it. Individual memory files only get opened when their one-line description looks relevant to whatever the session is actually doing. That's the whole point of keeping descriptions specific: a vague description means opening the file to find out if it matters, which defeats the reason the index exists.
 
 Update the index line whenever a memory is added, changed, or removed, an index that's out of sync with the files it points to is worse than no index.
 

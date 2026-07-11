@@ -72,7 +72,7 @@ paste `SETUP.md` 個內容（或者個 repo link）落去，打 "set me up"。�
 
 ## English (short mirror)
 
-**What you need:** a computer (Mac or Windows), about 30 minutes, a Claude account. Obsidian is free; Claude Code costs money, it isn't free.
+**What you need:** a computer (Mac or Windows), about 30 minutes, and an account for your chosen AI CLI (a Claude account for the default). Obsidian is free; the AI CLIs cost money, they aren't free.
 
 **6 steps:**
 

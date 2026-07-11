@@ -14,7 +14,7 @@ tags: [identity, template]
 
 ## Working Style
 
-%%fill this in — setup does it for you%%
+%%fill this in yourself as you notice how you work — setup doesn't ask this one%%
 
 ## Goals
 

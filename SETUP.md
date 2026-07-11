@@ -52,7 +52,7 @@ One question at a time. If they skip one, move on; never invent answers.
 
 ## Phase 4 — Personalize
 
-1. Fill `Context/me.md` from answers 1–5 (the file's comments say what goes where). Delete the whole "Example (delete me)" section. Set `status: active`, replace the `template` tag with domain tags. Record the language policy and design pick (e.g. `Design direction: 2 — editorial serif`) under Communication preferences.
+1. Fill `Context/me.md` from answers 1–6 (the file's comments say what goes where). Delete the whole "Example (delete me)" section. Set `status: active`, replace the `template` tag with domain tags. Record the language policy and design pick (e.g. `Design direction: 2 — editorial serif`) under Communication preferences.
 2. Seed each domain from answer 2: one real starter note `Knowledge/{domain}/overview.md` with frontmatter (`type: note`, `status: active`, 2+ tags) summarizing what they told you. Never an empty folder.
 3. Reset memory: delete `memory/_example_feedback.md` AND its line in `memory/MEMORY.md` (the Alex recipe example). The index must contain only the user's own memories from here on.
 4. If answer 7 was delete: remove `examples/trading/`, then patch every reference to it in `README.md` and `docs/` so no dead link remains. If `examples/` is empty afterward, remove it too.

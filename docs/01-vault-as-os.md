@@ -12,7 +12,7 @@ None of this is a new invention, it's the same read-eval-write loop every statef
 
 ## What a session looks like
 
-1. **Read state.** First response of a session: read the latest `Daily/` note and `Context/me.md`, silently, no "let me check your files" preamble.
+1. **Read state.** First response of a session: read the latest `Daily/` note, `Context/me.md`, and `memory/MEMORY.md`, silently, no "let me check your files" preamble.
 2. **Do the work.** Answer the question, write the code, research the thing, whatever was asked.
 3. **Route new information.** Anything worth keeping goes to its canonical file, per the table in `CLAUDE.md`. Not a chat reply that evaporates, a file that persists.
 4. **Write the session log.** If the session produced real work (not casual chat), append a log to `Daily/YYYY-MM-DD.md` so the next session has a paper trail.
