@@ -1,6 +1,6 @@
 # The Routing Kernel
 
-`CLAUDE.md` at the repo root is the kernel: the one file Claude Code loads automatically every session, before it does anything else. It has five jobs, in this order: say what to read on session startup, list where each type of information belongs, define the frontmatter standard, define the Obsidian syntax conventions, and state the operating rules and anti-patterns. This doc walks through each piece as it's actually written in that file, not an idealized version of it.
+`CLAUDE.md` at the repo root is the kernel: the one file your agent loads automatically every session, before it does anything else. It has five jobs, in this order: say what to read on session startup, list where each type of information belongs, define the frontmatter standard, define the Obsidian syntax conventions, and state the operating rules and anti-patterns. This doc walks through each piece as it's actually written in that file, not an idealized version of it.
 
 ## The routing table
 
@@ -19,7 +19,7 @@ The rule underneath the table matters more than the table itself: **every piece 
 
 ## Per-folder routers
 
-The root kernel stays short by delegating folder-specific detail to a `CLAUDE.md` inside each folder. Claude reads the relevant one when it's actually working in that folder, so the root file doesn't have to carry every folder's rules up front. In this repo:
+The root kernel stays short by delegating folder-specific detail to a `CLAUDE.md` inside each folder. Your agent reads the relevant one when it's actually working in that folder, so the root file doesn't have to carry every folder's rules up front. In this repo:
 
 - `Context/CLAUDE.md`: what `me.md` holds and why it's the single copy of identity.
 - `Daily/CLAUDE.md`: the daily note structure (`Focus` / `Progress` / `Open loops`) and when to write one.
@@ -53,4 +53,4 @@ The kernel's Anti-Patterns section is short on purpose, five things, all failure
 - Writing a catch-all "misc" or "notes" file instead of routing.
 - Pre-creating empty folders for domains you haven't started yet, folders show up when content does.
 
-None of these are enforced by tooling, they're enforced by Claude actually following the kernel every session. That's the whole bet this repo makes: a small, always-loaded set of rules keeps a system this loose from decaying into an unsorted pile.
+None of these are enforced by tooling, they're enforced by your agent actually following the kernel every session. That's the whole bet this repo makes: a small, always-loaded set of rules keeps a system this loose from decaying into an unsorted pile.
