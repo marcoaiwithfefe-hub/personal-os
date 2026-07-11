@@ -30,7 +30,7 @@ Steps ③ and ④ are optional because plenty of domains are just notes: reading
 To see the recipe generalize, here's the same four steps for a domain that has nothing to do with markets, sketched, not built:
 
 ① Domain: supplier costs, since flour and butter prices move and Alex wants to see the trend before the next order.
-② Folder: `Knowledge/bakery/`, already implied by the example in `Context/me.md`. No new root table row, "Domain knowledge → `Knowledge/{domain}/`" already covers it.
+② Folder: `Knowledge/bakery/`, since Alex is a hypothetical baker tracking a domain no starter file ever mentions. No new root table row, "Domain knowledge → `Knowledge/{domain}/`" already covers it.
 ③ Script: a small script hitting the supplier's price page or emailed price sheet, printing the current price per ingredient, the same shape as `fred.py`, i.e. one fetch function, one `main()`, exit non-zero if the page format changed.
 ④ Skill: a skill that runs the price check every Monday and flags any ingredient that moved more than a set threshold since the last routed note, rather than Alex re-reading the whole price history by hand each week.
 

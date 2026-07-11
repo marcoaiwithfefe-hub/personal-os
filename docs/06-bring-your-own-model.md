@@ -14,7 +14,7 @@ claude
 
 Then paste the contents of `SETUP.md`.
 
-`Tested with: (pending dry run, Task 9)`
+`Tested with: Claude Code 2.1.207 on 2026-07-12.`
 
 ## Codex CLI
 

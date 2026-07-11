@@ -30,7 +30,7 @@ End of phase check: `CLAUDE.md`, `SETUP.md`, `Daily/`, `Context/`, `memory/` all
 
 One question at a time. If they skip one, move on; never invent answers.
 
-1. "What's your name, and what do you do day to day?"
+1. "What's your name, where are you based, and what do you do day to day?"
 2. "What are 2 or 3 areas of your life you want this OS to help you manage?" (hobby, business, health, learning, anything)
 3. "What's a near-term goal or two you're working toward right now?"
 4. "How do you like information presented back to you? Short and direct, detailed, bulleted, something else?"
@@ -55,7 +55,7 @@ One question at a time. If they skip one, move on; never invent answers.
 1. Fill `Context/me.md` from answers 1–5 (the file's comments say what goes where). Delete the whole "Example (delete me)" section. Set `status: active`, replace the `template` tag with domain tags. Record the language policy and design pick (e.g. `Design direction: 2 — editorial serif`) under Communication preferences.
 2. Seed each domain from answer 2: one real starter note `Knowledge/{domain}/overview.md` with frontmatter (`type: note`, `status: active`, 2+ tags) summarizing what they told you. Never an empty folder.
 3. Reset memory: delete `memory/_example_feedback.md` AND its line in `memory/MEMORY.md` (the Alex recipe example). The index must contain only the user's own memories from here on.
-4. If answer 7 was delete: remove `examples/trading/`, then patch every reference to it in `README.md` and `docs/` so no dead link remains.
+4. If answer 7 was delete: remove `examples/trading/`, then patch every reference to it in `README.md` and `docs/` so no dead link remains. If `examples/` is empty afterward, remove it too.
 5. Write today's first `Daily/` note per `Daily/CLAUDE.md` (Focus / Progress / Open loops), logging the setup. Open loops = any interview question they skipped.
 
 ## Phase 5 — Verify (run it yourself, report results)
