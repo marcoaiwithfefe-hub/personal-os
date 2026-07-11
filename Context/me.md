@@ -6,7 +6,7 @@ tags: [identity, template]
 
 ## Identity
 
-%%fill this in — /onboard does it for you%%
+%%fill this in — setup does it for you%%
 
 - Name:
 - Role:
@@ -14,22 +14,22 @@ tags: [identity, template]
 
 ## Working Style
 
-%%fill this in — /onboard does it for you%%
+%%fill this in — setup does it for you%%
 
 ## Goals
 
-%%fill this in — /onboard does it for you%%
+%%fill this in — setup does it for you%%
 
 - Near-term:
 - Long-term:
 
 ## Domains I care about
 
-%%fill this in — /onboard does it for you%%
+%%fill this in — setup does it for you%%
 
 ## Communication preferences
 
-%%fill this in — /onboard does it for you%%
+%%fill this in — setup does it for you%%
 
 ---
 

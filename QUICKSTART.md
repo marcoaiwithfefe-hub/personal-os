@@ -12,16 +12,16 @@
 
 老實講：Claude Code 呢個工具要俾錢用，唔係完全免費。Obsidian 就梗係免費嘅。
 
-## 5 步開始
+## 6 步開始
 
 **① 裝 Obsidian**
 
 去 [obsidian.md](https://obsidian.md) 撳個掣裝落嚟，跟住畫面指示做就得。
 成功嘅樣：部機度開到個 Obsidian app，見到歡迎畫面。
 
-**② 裝 Claude Code**
+**② 裝一個 AI CLI**
 
-去官方安裝頁：[claude.com/claude-code](https://claude.com/claude-code)。個安裝器會一步步教你，跟住畫面做就得。
+我哋推薦 [Claude Code](https://claude.com/claude-code)：唔使識 code，跟住個安裝器一步步做就得。去官方安裝頁：[claude.com/claude-code](https://claude.com/claude-code)。想用第二個都得（例如 Codex、Gemini CLI），睇吓 `docs/06-bring-your-own-model.md`。
 成功嘅樣：安裝器話你安裝完成。
 
 **③ Download 呢個 repo**
@@ -40,19 +40,20 @@ Windows：喺 File Explorer 開個 folder，喺上面地址欄打 `cmd` 撳 Ente
 claude
 ```
 
-見到個黑色視窗打字得 = 成功。第一次會叫你登入 Claude 帳號，跟住做就得。跟住打：
+見到個黑色視窗打字得 = 成功。第一次會叫你登入帳號，跟住做就得。跟住：
 
-```
-/onboard
-```
+paste `SETUP.md` 個內容（或者個 repo link）落去，打 "set me up"。個 AI 會自己一步步做，你答問題就得。
 
-Claude 會逐條問你幾條問題（你叫咩名、做咩、想呢個系統幫你顧邊幾樣嘢、有咩短期目標、想點樣睇返啲資訊），照答就得，唔識答可以 skip。
 成功嘅樣：佢答完會幫你填好個人資料檔，仲寫低第一篇日記。
 
 **⑤ 之後每日**
 
 開返個 session（即係打 `claude` 再開始傾偈），將發生咗咩、諗到咩、變咗咩，同佢講就得。AI 自己識歸檔，唔使你自己執 file。
 成功嘅樣：你會見到 `Daily/` folder 入面自動多咗今日嘅 note。
+
+**⑥ 試下重啟**
+
+熄咗個 CLI 再開過，講一件新嘢俾佢聽。佢識自動歸檔 = 成功。
 
 ## 常見問題
 
@@ -73,13 +74,14 @@ Claude 會逐條問你幾條問題（你叫咩名、做咩、想呢個系統幫�
 
 **What you need:** a computer (Mac or Windows), about 30 minutes, a Claude account. Obsidian is free; Claude Code costs money, it isn't free.
 
-**5 steps:**
+**6 steps:**
 
 1. Install [Obsidian](https://obsidian.md). Success looks like: the app opens to a welcome screen.
-2. Install [Claude Code](https://claude.com/claude-code), the installer walks you through it.
+2. Install an AI CLI. We recommend [Claude Code](https://claude.com/claude-code) as the no-code default, the installer walks you through it. Want another one instead (Codex, Gemini CLI)? See `docs/06-bring-your-own-model.md`.
 3. Download this repo (green **Code** button on GitHub → Download ZIP → unzip), then open that folder in Obsidian as a vault. Success looks like: you see folders such as `Daily`, `Context`, `Knowledge` in Obsidian's sidebar.
-4. Open a terminal in that folder, type `claude`, then type `/onboard`. It asks a few questions one at a time; answer or skip.
+4. Open a terminal in that folder, type `claude` (or your CLI's command), then paste in `SETUP.md`'s contents (or this repo's link) and say "set me up." It walks itself through setup; you just answer its questions.
 5. From then on: open a session daily, talk to it plainly, it files everything itself.
+6. Restart probe: close the CLI, reopen it, tell it one new fact. If it auto-files that fact, setup worked.
 
 **FAQ**
 
