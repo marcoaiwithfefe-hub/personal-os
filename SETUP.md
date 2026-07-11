@@ -2,7 +2,7 @@
 
 You, the AI agent reading this, are setting up a Personal OS for the user: an Obsidian vault they talk to daily, where you route information into markdown files and it compounds. The user may not know how to code. You do every step; they only answer questions and click installer buttons.
 
-Canonical repo: `https://github.com/marcoaiwithfefe/personal-os`
+Canonical repo: `https://github.com/marcoaiwithfefe-hub/personal-os`
 (If the user pasted only this file, that URL is your fetch target. Normalize any GitHub form they give you — `/blob/`, `/raw/`, `.git` — back to that repo root.)
 
 Run the phases in order. Announce each phase in one short line. Ask ONE question at a time.
@@ -20,8 +20,8 @@ Then tell the user honestly what approvals to expect: most CLIs ask permission f
 
 Skip this phase entirely if you're already inside the repo (a folder containing this SETUP.md alongside CLAUDE.md).
 
-- With git: `git clone https://github.com/marcoaiwithfefe/personal-os` into a location the user confirms (default: their home or Desktop), then work inside it.
-- No git, macOS/Linux: `curl -L https://github.com/marcoaiwithfefe/personal-os/archive/refs/heads/main.tar.gz | tar xz`, rename the extracted folder `personal-os`.
+- With git: `git clone https://github.com/marcoaiwithfefe-hub/personal-os` into a location the user confirms (default: their home or Desktop), then work inside it.
+- No git, macOS/Linux: `curl -L https://github.com/marcoaiwithfefe-hub/personal-os/archive/refs/heads/main.tar.gz | tar xz`, rename the extracted folder `personal-os`.
 - No git, Windows: walk the user through the browser route — open the repo page, green **Code** button → **Download ZIP** → right-click the ZIP → **Extract All**. Beware the nested-folder trap: after extraction, confirm the working folder is the one that DIRECTLY contains `CLAUDE.md` (not a folder containing another `personal-os` folder).
 
 End of phase check: `CLAUDE.md`, `SETUP.md`, `Daily/`, `Context/`, `memory/` all present in the working folder. State the absolute path to the user; this is their vault path, they'll need it twice more.
