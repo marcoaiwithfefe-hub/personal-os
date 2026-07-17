@@ -18,7 +18,7 @@ Save a copy of the raw source (or its markdown conversion) under `Knowledge/{dom
 
 ## Keeping it healthy
 
-Periodically ask the agent to lint: contradictions between pages, stale claims a newer source superseded, orphan pages nothing links to, concepts mentioned often but lacking their own note. (Claude Code users: the `optimize` extra in `.claude/skills/` does exactly this.)
+Periodically ask the agent to lint: contradictions between pages, stale claims a newer source superseded, orphan pages nothing links to, concepts mentioned often but lacking their own note.
 
 ## Tips
 

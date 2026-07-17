@@ -10,8 +10,6 @@ A starter vault that turns [Obsidian](https://obsidian.md) plus **any agent CLI*
 - **Three UI directions** (`design.md`): pick a look once; anything your agent builds you later obeys it.
 - **One worked example with live data** (`examples/trading/`): a full domain built out end to end, so you can see the pattern applied to something real before you build your own.
 
-Claude Code users get two optional extras in `.claude/skills/` (`harvest`, `optimize`).
-
 This is a template, not a finished product. You fork it, then spend a week actually living in it before it starts to feel like yours.
 
 ## Quickstart — your part
