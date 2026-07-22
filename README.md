@@ -9,8 +9,18 @@ A starter vault that turns [Obsidian](https://obsidian.md) plus **any agent CLI*
 - **Agent-run setup** (`SETUP.md`): paste it into your CLI, say "set me up", answer a short interview.
 - **Three UI directions** (`design.md`): pick a look once; anything your agent builds you later obeys it.
 - **One worked example with live data** (`examples/trading/`): a full domain built out end to end, so you can see the pattern applied to something real before you build your own.
+- **Two self-maintenance skills** (`.claude/skills/`): `/harvest` learns new rules from your own usage; `/optimize` audits vault hygiene. See below.
 
 This is a template, not a finished product. You fork it, then spend a week actually living in it before it starts to feel like yours.
+
+## The two skills
+
+The vault ships with two commands your agent already knows, in `.claude/skills/`:
+
+- **`/harvest`** scans your last two weeks of daily notes for repeated actions and repeated corrections, then proposes new rules or skills based on how you actually work. Nothing is adopted without your yes. This is the part that makes the vault improve itself: you live in it, it learns your patterns, you approve what sticks.
+- **`/optimize`** audits the vault for hygiene — dead wikilinks, orphan notes, misrouted files, missing frontmatter, stale notes — and proposes fixes. Read-only until you approve.
+
+Run `/harvest` after a week or two of real use; run `/optimize` whenever the vault starts to feel messy.
 
 ## Quickstart — your part
 
