@@ -52,9 +52,9 @@ Gemini CLI reads `GEMINI.md`, which SETUP.md's Phase 3 writes as a one-line poin
 
 Install Grok Builder per [xAI's docs](https://x.ai) for your platform. Once installed, open it in the vault folder and paste `SETUP.md`.
 
-Grok Builder reads `AGENTS.md`, which SETUP.md's Phase 3 writes as a full copy of `CLAUDE.md` — verified live: a restarted session with no setup context loaded it, routed a new fact to the right daily note, and reported the path.
+Grok Build picks up `CLAUDE.md` itself, nested folder files included, plus `AGENTS.md`, `.claude/rules/` and project `.claude/skills/` (its built-in docs, version 1.0.50). So SETUP.md's Phase 3 writes no `AGENTS.md` for it: a second copy would load every rule twice. Grok reads up to 10,000 characters per rule file, so keep `CLAUDE.md` under that.
 
-`Tested with: Grok Builder on 2026-07-12.`
+`Tested with: Grok Builder on 2026-07-12 (AGENTS.md route); rule-file pickup re-read from Grok Build 1.0.50 docs on 2026-10-11.`
 
 ## opencode + any endpoint
 

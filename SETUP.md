@@ -42,7 +42,8 @@ One question at a time. If they skip one, move on; never invent answers.
 
 `CLAUDE.md` is the master; never edit it in this phase.
 
-- If you are Codex CLI, opencode, Grok Builder, or any CLI whose native rule file is `AGENTS.md`: write `AGENTS.md` as a FULL copy of `CLAUDE.md`'s content, prefixed with this exact header line:
+- If you are Grok Build (Grok Builder): nothing to generate. It loads `CLAUDE.md` natively, and an extra `AGENTS.md` would load the rules twice.
+- If you are Codex CLI, opencode, or any CLI whose native rule file is `AGENTS.md`: write `AGENTS.md` as a FULL copy of `CLAUDE.md`'s content, prefixed with this exact header line:
   `<!-- Generated from CLAUDE.md — edit CLAUDE.md, then ask your agent to re-sync. -->`
   A one-line pointer is NOT enough; your future sessions will only load this file.
 - If you are Gemini CLI: write `GEMINI.md` containing exactly:
@@ -56,7 +57,8 @@ One question at a time. If they skip one, move on; never invent answers.
 2. Seed each domain from answer 2: one real starter note `Knowledge/{domain}/overview.md` with frontmatter (`type: note`, `status: active`, 2+ tags) summarizing what they told you. Never an empty folder.
 3. Reset memory: delete `memory/_example_feedback.md` AND its line in `memory/MEMORY.md` (the Alex recipe example). The index must contain only the user's own memories from here on.
 4. If answer 7 was delete: remove `examples/trading/`, then patch every reference to it in `README.md` and `docs/` so no dead link remains. If `examples/` is empty afterward, remove it too.
-5. Write today's first `Daily/` note per `Daily/CLAUDE.md` (Focus / Progress / Open loops), logging the setup. Open loops = any interview question they skipped.
+5. Add 1 to 3 starter tasks from answer 3 to `Context/todo.md` under `## To-Do`, each with a status tag and its area tag (format in the file).
+6. Write today's first `Daily/` note per `Daily/CLAUDE.md` (Focus / Progress / Open loops), logging the setup. Open loops = any interview question they skipped.
 
 ## Phase 5 — Verify (run it yourself, report results)
 
@@ -64,6 +66,7 @@ One question at a time. If they skip one, move on; never invent answers.
 - Link check, scoped: in `Context/me.md`, today's `Daily/` note, `memory/MEMORY.md`, and any file you patched — every `[[wikilink]]` target exists. Shipped teaching examples (`Daily/2025-01-01-example.md`) are exempt.
 - Memory round trip: create one real memory from the interview (e.g. their presentation preference) as `memory/` file + index line, close your mental context, then re-read ONLY `memory/MEMORY.md` and prove you can recover the fact from the index line.
 - Daily note conforms to `Daily/CLAUDE.md` structure.
+- `Context/todo.md` has at least one task line, and every line has a status tag and an area tag.
 
 Report each check pass/fail. Fix fails before moving on.
 
@@ -77,6 +80,6 @@ Have the user install Obsidian (free, [obsidian.md](https://obsidian.md)), then:
 
 ## Phase 8 — Restart probe (the real test)
 
-Tell the user: close this CLI completely, reopen it in the vault folder, and tell the new session one new fact (anything). The new session — without this SETUP.md in context — must route it to the right file and say where it put it. That proves the rule file actually loads. If the new session behaves like a generic chatbot instead, the rule-file wiring failed: re-open SETUP.md and re-run Phase 3.
+Tell the user: close this CLI completely, reopen it in the vault folder, and tell the new session one new fact (anything) plus one task for later. The new session — without this SETUP.md in context — must route the fact to the right file, add the task to `Context/todo.md` with its tag, and say where each went. That proves the rule file actually loads. If the new session behaves like a generic chatbot instead, the rule-file wiring failed: re-open SETUP.md and re-run Phase 3.
 
-That's it. Daily loop from here: open a session, talk normally, the agent files everything. Corrections you give become permanent memories without asking.
+That's it. Daily loop from here: open a session, talk normally, the agent files everything. Tasks land in `Context/todo.md`, tagged by project. Corrections become rules in the file of the project they belong to, without asking. In the first month the agent will ask where things belong more often; answer it, and it learns the placement.

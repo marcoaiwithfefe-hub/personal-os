@@ -13,7 +13,9 @@ The heart of the kernel is one table:
 | Domain knowledge (any subject you track) | `Knowledge/{domain}/` |
 | Project info | `Projects/{name}/` |
 | Long-term facts about you (one fact per file) | `memory/` |
-| Rules for assistant behavior | Root `CLAUDE.md` (Rules section) |
+| Open tasks, each tagged with its project or area | `Context/todo.md` |
+| Rules for one project only | `Projects/{name}/CLAUDE.md` |
+| Rules for every session | Root `CLAUDE.md` (Rules section) |
 
 The rule underneath the table matters more than the table itself: **every piece of information has a home, no catch-all "misc" or "notes" file.** If something doesn't fit a row, that's a signal to add a row (and probably a folder), not to shove it into whatever file is closest. `docs/04-extending-to-a-domain.md` walks through adding a row for real.
 
@@ -25,6 +27,7 @@ The root kernel stays short by delegating folder-specific detail to a `CLAUDE.md
 - `Daily/CLAUDE.md`: the daily note structure (`Focus` / `Progress` / `Open loops`) and when to write one.
 - `Knowledge/CLAUDE.md`: one subfolder per domain, created on demand, not pre-scaffolded.
 - `Projects/CLAUDE.md`: the `README.md` + `specs/`/`research/`/`notes/` shape for a project folder.
+- `Projects/{name}/CLAUDE.md`: rules for one project, created when the first correction about that project arrives. This is what keeps one project's rules from leaking into every session.
 
 `memory/README.md` plays the same role for `memory/`, except its schema is different enough (frontmatter of `name`/`description`/`type` instead of `type`/`date`/`status`/`tags`) that the root kernel explicitly exempts it rather than trying to force one schema over both. See `docs/03-memory-protocol.md` for that folder in full.
 

@@ -17,7 +17,7 @@ Read every `Daily/YYYY-MM-DD.md` dated within the last 14 days. Grep across them
 
 For each pattern found, propose exactly one of:
 
-- **A new rule** for root `CLAUDE.md`'s Rules section, if it's a standing behavior Claude should always follow. One line, plus a one-line justification citing where it happened 3+ times.
+- **A new rule**, if it's a standing behavior Claude should always follow. Place it per root Rule 4: the project's `Projects/{name}/CLAUDE.md` if it is about one project, root `CLAUDE.md`'s Rules section if it applies everywhere. One line, plus a one-line justification citing where it happened 3+ times.
 - **A new skill**, if it's a multi-step process worth capturing as `.claude/skills/{name}/SKILL.md`. One line describing what it would do, plus a one-line justification.
 
 If nothing repeated 3+ times, say so and stop. Don't force a proposal.

@@ -6,6 +6,7 @@ A starter vault that turns [Obsidian](https://obsidian.md) plus **any agent CLI*
 
 - **A routing kernel** (`CLAUDE.md`): the rules your agent follows every session, i.e. where information lives, how to write it, when to save it.
 - **A memory protocol**: identity and preferences in one place, daily logs in another, domain knowledge routed by topic, no catch-all notes.
+- **A to-do list and per-project rules**: tasks land in `Context/todo.md`, tagged by project; a correction becomes a rule in the file of the project it is about, so one project's rules never leak into another.
 - **Agent-run setup** (`SETUP.md`): paste it into your CLI, say "set me up", answer a short interview.
 - **Three UI directions** (`design.md`): pick a look once; anything your agent builds you later obeys it.
 - **One worked example with live data** (`examples/trading/`): a full domain built out end to end, so you can see the pattern applied to something real before you build your own.
