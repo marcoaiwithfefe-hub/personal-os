@@ -1,0 +1,9 @@
+# public-gate allow list. Each line names a template path that lives in vault-style
+# folders on purpose: this repo IS the public vault template. Checked 2026-10-16:
+# every version of each file in history holds only fictional examples ("Alex"), no real data.
+path Context/me.md  # blank identity template, status: template
+path Daily/2025-01-01-example.md  # fictional example daily note
+path Daily/CLAUDE.md  # folder router, instructions only
+path memory/MEMORY.md  # memory index template with one fictional example line
+path memory/README.md  # memory protocol docs
+path memory/_example_feedback.md  # fictional example memory (Alex, metric recipes)
